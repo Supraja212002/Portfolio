@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #eec5e4; /* Set the background color to light blue */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    color: rgb(0, 0, 0);
+}
+
+
+/* Style the header */
+header {
+    background-color: #440434;
+    color: white;
+    padding: 20px;
+}
+
+
+/* Add styles for the button-container to create pairs side by side */
+.button-container {
+    text-align: center; /* Center button and image */
+    margin-top: 20px;
+}
+
+/* Style button-pair to control spacing */
+.button-pair {
+    align-items: center;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.button-pair:first-child{
+    margin-left: 20px;
+}
+
+/* Style buttons */ 
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #970a58;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+/* Style images within the button-pair */
+.button-pair img {
+    max-width: 100%;
+}
+
+/* Adjust this to control the width of the photographer containers */
+.photographer-container img {
+    height: 450px;
+    width: 450px;
+    max-width: 100%; /* Ensure images don't exceed their container width */
+    margin-top: 20px;
+}
+
+.designer-container img{
+    height: 450px;
+    width: 450px;
+    max-width: 100%; /* Ensure images don't exceed their container width */
+    margin-top: 20px;
+}
+
+.artist-container img{
+    height: 450px;
+    width: 450px;
+    max-width: 100%; /* Ensure images don't exceed their container width */
+    margin-top: 20px;
+}

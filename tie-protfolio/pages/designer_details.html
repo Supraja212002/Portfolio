@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Designer Details</title>
+    <style>
+        /* Add this CSS rule to justify the text to the left */
+        #designer-info {
+            display: flex;
+        }
+        
+        #designer-image {
+            flex: 1;
+            margin-top: 20px;
+
+        } 
+
+        #designer-bio {
+            flex: 2;
+            text-align: left;
+            margin-left: 20px; /* Adjust the value to your desired margin size */
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Designer Details</h1>
+        <h2>Meet our talented designers</h2>
+    </header>
+
+    <div class="designer-details">
+        <div id="designer-info">
+            <div id="designer-image">
+                <!-- Add designer image here >
+                <img src="../images/Shaaz-Jung.jpg" alt="designer" width="300px" height="300px">
+                <img src="../images/designer2.jpg" alt="designer" width="300px" height="300px">
+                <img src="../images/Aditya_Panda.jpg" alt="designer" width="300px" height="300px"-->
+            </div>
+            <div id="designer-bio">
+                <h2 id="designer-name">Designer Name</h2>
+                <p id="designer-bio-text">Designer bio.</p>
+            </div>
+        </div>
+
+        <h2>Best Clicks</h2>
+        <div class="photo-gallery" id="photo-gallery">
+            <!-- Images will be dynamically added here using JavaScript -->
+        </div>
+    </div>
+
+    <script>
+        // JavaScript code to load content based on designer ID
+        const designerId = new URLSearchParams(window.location.search).get("id");
+
+        const designerDetails = {
+        "1": {
+            name: "AKSHAR PATHAK",
+            bio: "Bio: Akshar Pathak (born 20 September 1989) is an artist and a graphic designer who creates posters of Bollywood films, based on one element kept in association with the film.His posters have been widely recognised in the digital world and featured in over 90 magazines and newspapers.He has earlier worked with Happily Unmarried, Comic Con India, and DSYN. He spent close to three years at Zomato, then took a short break during which he worked with All India Bakchod as a Social Media Manager. He is back at Zomato as of November 2015.Minimal Bollywood Posters is Akshar's brainchild that began in February 2012 and exploded on the pop culture scene of Cinema of India. Each film/T.V. show is portrayed graphically in the limited space that he works on. His posters have caught the eye of Facebook users around the World since it became viral through Social Networking Forums such as Facebook and Twitter.Tweetard is another such pet project by Akshar that he started in late 2012.It works under Pathak's profound philosophy that 'Twitter is a sheltered workshop for evil geniuses' and hence, began with depicting works of various Twitter handles in graphic form.Tweetard has been positively reviewed by the press as well as its fans, as it takes a satirical spin on significant issues that concern society  all in the same minimal fashion that he showcases in his visuals in Minimal Bollywood Posters ",
+            profile:  "../images/Akshar_Pathak.jpg",
+            clicks: [
+                "../images/dp11.jpg",
+                "../images/dp12.jpg",
+                "../images/dp13.jpg",
+                "../images/dp14.jpg"
+            ]
+        },
+        "2": {
+            name: "SHEKHAR GURERA",
+            bio: "Shekhar Gurera, also known as Chander Shekhar Gurera, is an Indian editorial cartoonist, illustrator, and graphic designer. He publishes regular cartoons with comments about India's political and social trends. His daily pocket cartoons appear in several English, Hindi, and regional language daily newspapers Punjab Kesari, Hind Samachar, Jag Bani, Nava Bharat, Central Chronicle The Pioneer, Sanmarg and Navodaya Times among others. He started his cartoon career in 1984 as a freelancer.Gurera was born on 30 August 1965 in Moga, Punjab India. He started his pre-university (11th) from DAV College, Abohar, but graduated with a degree in Science from Multani Mal Modi College at Patiala in 1986. After shifting to Gurgaon, Haryana he got the degree in Applied Arts from College of Art at New Delhi in 1990.During 1973 Gurera's first cartoon was published in Veer Pratap, a Hindi newspaper from Punjab, as he was awarded in an on-the-spot competition. During his school days he continued his skill of cartooning and sketching as hobby only. During 1984 he professionally started contributing to Punjab Kesari as freelancer while pursuing Science graduation at Patiala.",
+            profile: "../images/designer2.jpg",
+            clicks: [
+                "../images/dp21.jpg",
+                "../images/dp22.jpg",
+                "../images/dp23.jpg",
+                "../images/dp24.jpg"
+            ]
+        },
+        "3": {
+            name: "SUJATA KESHAVAN",
+            bio: "Bio:Sujata Keshavan (born 1961) is an Indian graphic designer. She is a co-founder of Ray and Keshavan, a brand design firm based in India.Keshavan's father was an engineer, and her mother was a painter. After considering studying medicine, taking a BSc in Mathematics or joining a fine arts college, she ended up joining the National Institute of Design, Ahmedabad.After completing her studies at Ahmedabad, Keshavan worked with Ram Ray at his advertising agency, Response, for six months starting in January 1985. After graduating with a Master of Fine Arts from Yale, Keshavan moved back to India. In 1989, she co-founded Ray + Keshavan, in India, with her former boss Ray. The portfolio of clients include Infosys, Kotak Mahindra Bank, the Himalaya Drug Co., Bharti Airtel, Hindustan Lever, Reliance, ITC, Wipro, McKinsey, Dr Reddy’s, Dabur, Max Group, TVS, MindTree, as well as several airports across the country.[8][4] In 2000, Keshavan was instrumental in giving the 130-year-old Himalaya Drug Company a complete image makeover, reworking on the brand architecture and reinventing the look and feel of the company, into the brand 'Himalaya', whose DNA was 'researching nature, enriching life'.She is also the one who has given the indigenous MTR a modern, international look. She was also involved in designing the logo of Infosys and Ashoka University. Growing up largely in the pre-technology era, Sujata, like most academically-strong performers of that generation, pursued Science in her high-school years. Since she was also intensely drawn to Art, a degree in Fine Arts seemed like a possibility. But her father had also heard about the National Institute of Design (NID), and he felt like its combination of an aesthetic perspective married to industrial applications might be apt for her.As it turned out, his hunch was spot on. After cracking the famously challenging entrance test to the Institute, Sujata reveled inside the program. While her aptitude for Art and Design was clearly demonstrable, she relished the manner in which Design ideals could be extended into different realms. She also recalls how NID, set up in 1961, was already more progressive than most Institutes of that time. When she entered the Ahmedabad campus in 1978 (after a harrowing three train rides from Bangalore), 50% of its admittees were women. Moreover, with faculty drawn from various parts of the world, the visionary five-and-half year program was imbued with a distinct point-of-view.Although, she had initially set out to do Industrial Design, her exposure at NID sparked an interest in Textile Design. She learned how deep and ancient our country’s textile traditions were, and how past practices could be reignited with modern designs. Even as she absorbed the plethora of textile forms, she appreciated the painstaking labour and time involved in making a single warp.Besides Textile Design, she was equally drawn to Graphic Design. Being more conceptual, the field demanded the constant begetting of new ideas.",
+            profile:  "../images/Sujatha_kesavan.jpg",
+            clicks: [
+                "../images/dp31.jpg",
+                "../images/dp32.jpg",
+                "../images/dp33.jpg",
+                "../images/dp34.jpg"
+            ]
+        }
+    };
+    const designer = designerDetails[designerId];
+    if (designer) {
+            document.getElementById("designer-name").textContent = designer.name;
+            document.getElementById("designer-bio-text").textContent = designer.bio;      
+            const profileImage = document.getElementById("designer-image");
+            if (profileImage) {
+                const imgElement = document.createElement("img");
+                imgElement.src = designer.profile;
+                imgElement.alt = designer.name;
+                imgElement.style.maxWidth = "100%"; // Adjust the maximum width as needed
+                imgElement.style.height = "300px";   // Maintain the aspect ratio
+                imgElement.style.width = "300px";
+                imgElement.style.marginRight = "20px";
+                imgElement.style.marginBottom = "20px";
+                imgElement.style.marginTop = "50px";
+                profileImage.appendChild(imgElement);
+            }
+            const photoGallery = document.getElementById("photo-gallery");
+                designer.clicks.forEach(click => {
+                const img = document.createElement("img");
+                img.src = click;
+                img.alt = "Photograph";
+                img.style.maxWidth = "100%"; // Adjust the maximum width as needed
+                img.style.height = "300px";   // Maintain the aspect ratio
+                img.style.width="300px";
+                img.style.marginRight="20px";
+                img.style.marginBottom="20px";
+                photoGallery.appendChild(img);
+        });
+    }
+    </script>
+</body>
+</html>

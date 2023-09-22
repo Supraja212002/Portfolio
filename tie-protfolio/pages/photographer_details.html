@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Photographer Details</title>
+    <style>
+        /* Add this CSS rule to justify the text to the left */
+        #photographer-info {
+            display: flex;
+        }
+        
+        #photographer-image {
+            flex: 1;
+            margin-top: 20px;
+
+        } 
+
+        #photographer-bio {
+            flex: 2;
+            text-align: left;
+            margin-left: 20px; /* Adjust the value to your desired margin size */
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Photographer Details</h1>
+        <h2>Meet our talented photographers</h2>
+    </header>
+
+    <div class="photographer-details">
+        <div id="photographer-info">
+            <div id="photographer-image">
+                <!-- Add photographer image here >
+                <img src="../images/Shaaz-Jung.jpg" alt="Photographer" width="300px" height="300px">
+                <img src="../images/photographer2.jpg" alt="Photographer" width="300px" height="300px">
+                <img src="../images/Aditya_Panda.jpg" alt="Photographer" width="300px" height="300px"-->
+            </div>
+            <div id="photographer-bio">
+                <h2 id="photographer-name">Photographer Name</h2>
+                <p id="photographer-bio-text">Photographer bio.</p>
+            </div>
+        </div>
+
+        <h2>Best Clicks</h2>
+        <div class="photo-gallery" id="photo-gallery">
+            <!-- Images will be dynamically added here using JavaScript -->
+        </div>
+    </div>
+
+    <script>
+        // JavaScript code to load content based on photographer ID
+        const photographerId = new URLSearchParams(window.location.search).get("id");
+
+        const photographerDetails = {
+        "1": {
+            name: "SHAAZ JUNG",
+            bio: "Bio: Shaz Jung is a wildlife photographer and he has worked with some of the big names in the media industry such as national geographic.Shaaz Jung is a bit of a celebrity in the world of wildlife photography. The young photographer's lens has captured elephant herds, tigers on the prowl, and panthers curled up on trees, but it's the leopards that have earned him a reputation. Over the last decade, Shaaz has spent much of his time in the forests of Kabini, in the buffer zone between Nagarhole and Bandipur wildlife sanctuaries in Karnataka, where he runs a resort with his father and keen conservationist, Saad Bin Jung.Shaaz has spent the last decade guiding safaris and now specialises in documenting melanistic leopards. Never before have melanistic leopards been documented intimately, and it's safe to say that Shaaz's portfolio on this spectacular animal is unparalleled. His journey into the world of cinematography has allowed him to expand on his creative abilities: he is currently serving as Director of Photography for a National Geographic feature film that focuses on melanistic leopards.Shaaz's work has always been a reflection of the mystical forest. His work is a unique blend between fine art and photography, a style he calls 'environmental surrealism'. His annual exhibitions are held across the globe and showcase an array of breathtaking prints. Through his work, Shaaz aims to spread awareness and help educate the masses. As an aspiring conservationist, he also runs a Trust on the fringes of the forest called the Buffer Conflict Resolution Trust of India (BCRTI), a non-profit organisation that addresses conflicts within the buffer regions of protected forests in South India.It's not an easy task, but the BCRTI is bringing about a change of perception. 'Our aim is to educate with films and other media, to create an emotional connect with wildlife,' says Shaaz. Since India has the Wildlife Protection Act but no conservation laws like those in Africa, the need of the hour is definitely to pursue conservation laws that can help us preserve and protect the beautiful forests of India.Today, he is part of the Buffer Conflict Resolution Trust of India (BCRTI), a non-profit organization that addresses conflicts within the buffer regions of protected forests. It aims to bridge the gap between the locals, officials, and private sector owners. Through vocational training among locals, the trust helps create jobs in the tourist sector, and build awareness about animal behaviour and protocol during man-animal conflict. This is crucial as a number of villages are at the periphery of the forests, where animal activity is frequent. In addition, very little compensation is received for crops that are destroyed and animals that are taken by the wild.",
+            profile:  "../images/Shaaz-Jung.jpg",
+            clicks: [
+                "../images/sj1.jpg",
+                "../images/sj2.jpg",
+                "../images/sj3.jpg",
+                "../images/sj4.jpg"
+            ]
+        },
+        "2": {
+            name: "RATHIKA RAMASWAMY",
+            bio: "Bio: Rathika Ramasamy was born in a village Venkatachalapuram near Theni, a town in Southern India, Rathika has always had a fierce connection with the drama of nature.Now she is based in Chennai. An MBA/Computer Engineer, she was drawn towards the photographic capture of this drama as a career in 2003 at Bharatpur Bird Sanctuary, a UNESCO world heritage site.Rathika is arguably one of India's foremost wildlife photographers, with 20 years of experience in this field. She is passionate about birds and a specialist in bird photography. She documents birds and animals through her photographs using a blend of technical excellence and a captivating story. She is a Nikon Professional Member (NPS). Her work has been appreciated and featured in several national and international publications as well as exhibitions, and she has served on the jury panel for several national and international photography competitions. In addition to this, she regularly conducts wildlife photography master classes in the field in order to cultivate new talent. She also conducts talks to spread awareness about the importance of conservation and saving Mother Nature for future generations. She is the founder member of RR Foundation for Wildlife Conservation(RRFWC).She has travelled across most of India's national parks and wildlife sanctuaries, and has also been to some wildlife reserves in Africa. For her, wildlife photography is not only a passion, but is also a powerful medium to connect and conserve nature. With this in mind, she clicks every picture with the motto: Every time I press the shutter, it's one step closer to Mother Nature.She got many Accolades and recognition.Some are In September 2005, she participated in the Clean Ganga Campaign and exhibited her work at the India International Center, New Delhi along with her photographer friends.2005, She was one of the founder member of Photography Art Association of India, PAAI, photography forum for photographers,In 2007, she worked on the calendar for the prestigious Jawaharlal Nehru University that featured birds of the campus, New Delhi,She was selected as one of the top bird photographers in India by 'Birds of India's in 2008,2009 October- Doordarshan honoured her as first wildlife women photographer in India and featured her work in DD national,Jury for the UN World Oceans Day Photo Competition 2022,Jury for the Bird Photographer of the Year(BPOTY), 2023,Jury for the UN World Oceans Day Photo Competition 2023 and many more.",
+            profile: "../images/photographer2.jpg",
+            clicks: [
+                "../images/rr1.jpg",
+                "../images/rr2.jpg",
+                "../images/rr3.jpg",
+                "../images/rr4.jpg"
+            ]
+        },
+        "3": {
+            name: "ADITYA PANDA",
+            bio: "Bio:Aditya Panda is an award-winning naturalist, wildlife conservationist and photographer from Orissa, India. Since his teen years, he has worked for the conservation of tiger and elephant landscapes and waterfowl near his home. While his conservation work is mostly limited to eastern Central India, as a naturalist and photographer he has traveled extensively across India’s tiger and elephant habitats, including famous safari circuits and lesser-known wilderness areas. Aditya’s current conservation work focuses on identifying and preserving the integrity of larger tiger and elephant landscapes, empowering human-elephant conflict mitigation squads, and working with frontline forest personnel in tiger habitat. When Aditya is not engaged in conservation battles, he enjoys working as a naturalist guide and introducing people to what he believes is the most fascinating wildlife landscape anywhere—Indias tigerland. He is a natural and attentive host who can engage guests in conversations on a wide range of topics. He is always eager to go the extra mile to make guests comfortable, and his infectious interpretation style,  which avidly conveys his fascination with wilderness, helps his guests gain a deep understanding of and appreciation for Indian wildlife...While still in high school he came across a local conservation organisation where he was lucky to find some fine mentors who introduced me to grassroots wildlife conservation and provided plenty of scope for fieldwork.He remained involved in conservation and photography, cultivated his knowledge of natural history and in due course found himself a job at a tiger conservation news magazine called TigerLink. At the same time he was becoming engrossed in conservation advocacy, particularly for the tiger and elephant landscapes of Odisha. His conservation work in Odisha earned me an ABN AMRO-Sanctuary Asia Young Naturalist Award at the age 21, and later on a Carl Zeiss Wildlife Conservation Award. After some time, he chose to move on from my role as deputy editor of TigerLink to start his career in safari guiding. While his conservation advocacy has never ceased, there was a point when I felt that he was spending more time behind a desk than out in the wilderness.He fell in love with Kanha and spent some of my happiest days there. But there was also a sense of guilt of not being able to give enough time to conservation matters in Odisha, especially the Satkosia Tiger Reserve where he had become deeply involved. This led him to switch from being a camp naturalist to an expedition leading. Expedition leading allows him to not only return to Kanha but also explore the finest wilderness areas across India and at the same time, devote enough time to attend to conservation matters back in Odisha.",
+            profile:  "../images/Aditya_Panda.jpg",
+            clicks: [
+                "../images/ap1.jpg",
+                "../images/ap2.jpg",
+                "../images/ap3.jpg",
+                "../images/ap4.jpg"
+            ]
+        }
+    };
+    const photographer = photographerDetails[photographerId];
+    if (photographer) {
+            document.getElementById("photographer-name").textContent = photographer.name;
+            document.getElementById("photographer-bio-text").textContent = photographer.bio;      
+            const profileImage = document.getElementById("photographer-image");
+            if (profileImage) {
+                const imgElement = document.createElement("img");
+                imgElement.src = photographer.profile;
+                imgElement.alt = photographer.name;
+                imgElement.style.maxWidth = "100%"; // Adjust the maximum width as needed
+                imgElement.style.height = "300px";   // Maintain the aspect ratio
+                imgElement.style.width = "300px";
+                imgElement.style.marginRight = "20px";
+                imgElement.style.marginBottom = "20px";
+                imgElement.style.marginTop = "50px";
+                profileImage.appendChild(imgElement);
+            }
+            const photoGallery = document.getElementById("photo-gallery");
+                photographer.clicks.forEach(click => {
+                const img = document.createElement("img");
+                img.src = click;
+                img.alt = "Photograph";
+                img.style.maxWidth = "100%"; // Adjust the maximum width as needed
+                img.style.height = "300px";   // Maintain the aspect ratio
+                img.style.width="300px";
+                img.style.marginRight="20px";
+                img.style.marginBottom="20px";
+                photoGallery.appendChild(img);
+        });
+    }
+    </script>
+</body>
+</html>

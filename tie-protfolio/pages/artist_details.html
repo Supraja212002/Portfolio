@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Artist Details</title>
+    <style>
+        /* Add this CSS rule to justify the text to the left */
+        #artist-info {
+            display: flex;
+        }
+        
+        #artist-image {
+            flex: 1;
+            margin-top: 20px;
+
+        } 
+
+        #artist-bio {
+            flex: 2;
+            text-align: left;
+            margin-left: 20px; /* Adjust the value to your desired margin size */
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Artist Details</h1>
+        <h2>Meet our talented artists</h2>
+    </header>
+
+    <div class="artist-details">
+        <div id="artist-info">
+            <div id="artist-image">
+                 <!-- Image will be dynamically added here using JavaScript -->
+            </div>
+            <div id="artist-bio">
+                <h2 id="artist-name">artist Name</h2>
+                <p id="artist-bio-text">artist bio.</p>
+            </div>
+        </div>
+
+        <h2>Best Clicks</h2>
+        <div class="photo-gallery" id="photo-gallery">
+            <!-- Images will be dynamically added here using JavaScript -->
+        </div>
+    </div>
+
+    <script>
+        // JavaScript code to load content based on artist ID
+        const artistId = new URLSearchParams(window.location.search).get("id");
+
+        const artistDetails = {
+        "1": {
+            name: "MADHU DAS",
+            bio: "Madhu Das born-1987, received his BFA from College of Fine Arts, Karnataka Chitrakala Parishath, Bengaluru (2008) and an MFA from S. N. School of Fine Arts, Performing Arts and Communication, University of Hyderabad (2013). Apart from his solo show Work in Progress at Karnataka Chitrakala Parishath, Bengaluru (2009), Madhu has been part of numerous group shows. Recent group shows include Listen to the Lines Look for the Signs at Gallery 27, Kochi (2016), The Curriculum by Creative Time Summit in partnership with ArtOxygen & Studio-X, Mumbai (2015), The Conflicted Issue of Change and Urbanism – a compilation of video art curated by Gayatri Sinha at the Dr. Bhau Daji Lad Museum, Mumbai (2014), Sethusamudram, a travelling show curated by Suresh Jayaram at 1Shanthi Road Studio Gallery, Bengaluru and Theertha International Artists Collective, Colombo, Sri Lanka (2014), Sarai Reader 09, curated by Raqs Media Collective at Devi Art Foundation, Delhi (2013) and the first edition of the Kochi-Muziris Biennale (2012). Most recently, Madhu was artist-in-residence at TIFA Working Studio’s Artel Residency, Pune (2016). He has also been part of the T.A.J. Residency & SKE Projects, Bengaluru (2015), Sarai Reader 09, Devi Art Foundation, Delhi (2013), Sethu Residency, Theertha International Artists Collective, Colombo, Sri Lanka (2010) and Sandarbh Artist Residency Workshop, Baroda (2009). Madhu has shown at the India Art Fair, New Delhi, in 2015 and 2016, represented by The Guild Gallery, Mumbai. He was recipient of the Inlaks Fine Arts Award, 2015, and shortlisted for Emerging Indian Visual Artists by Delfina Foundation, UK, in 2014. Madhu lives and works in Mumbai.",
+            profile:  "../images/Madhu_das.jpg",
+            clicks: [
+                "../images/aa11.jpg",
+                "../images/aa12.jpg",
+                "../images/aa13.jpg",
+                "../images/aa14.jpg"
+            ]
+        },
+        "2": {
+            name: "SWATI PASARI",
+            bio: "Swati Pasari is a young and talented artist who has gained recognition for her distinct style of painting. Her works primarily revolve around themes of immortality, timelessness, inner stillness, peace, and meditation. Despite her relatively short time as an artist since 2007, her paintings reflect a remarkable artistic maturity. Swati art serves as a reflection of her inner soul and portrays a sense of joy and celebration of life. Each of her artistic creations is an expression of her search for inner peace and wholeness. She believes that art is a means to find inner tranquility, and she immerses herself in a different dimension when she paints. She doesn't know what the painting will become until it is completed, but she follows her intuition and allows the process to unfold naturally. Determining when a painting is complete is an intuitive process for Swati. She experiences an inner feeling of completeness when she looks at the painting. She sees a complete form of the original thought or idea that inspired her to start the painting. This sense of fulfillment indicates to her that the artwork is finished. Swati Pasari considers each of her paintings as a mirror that reflects her identity and beliefs. As a Pranic Healer, she possesses a strong spiritual side, which influences her artistic creations. Most of her paintings are imbued with the intention of spreading positivity and uplifting the viewers.Despite her relatively short career, Swati Pasari has already exhibited her paintings in various parts of India and abroad. Her artistic excellence has gained recognition and admiration, leading to multiple upcoming exhibitions. Swati journey as an artist reflects her passion for painting and her constant exploration of self-expression through art.",
+            profile: "../images/swati-pasari.jpg",
+            clicks: [
+                "../images/aa21.jpg",
+                "../images/aa22.jpg",
+                "../images/aa23.jpg",
+                "../images/aa24.jpg"
+            ]
+        },
+        "3": {
+            name: "SACHIN GEOGRE SEBASTIAN",
+            bio: "Born in Kanhangad, Kerala, in 1985, Sachin George Sebastian is a graduate in communication design from the National Institute of Design (NID), Ahmedabad, in 2006. His work has appeared in several solo and group shows most recently Once, there was a seed at Vadehra Art Gallery, New Delhi (2021) and Lokame Tharavadu, curated by Bose Krishnamachari, in Allepey, Kerala (2021) – as well as Exhibit 320 (2015, 2012); Devi Art Foundation (2015) in New Delhi; Gallery OED (2013, 2012); Kochi and Birla Academy (2014), Kolkata; and an installation preview at India International Centre (IIC), New Delhi (2012). His work has also been featured at Abu Dhabi Art (2020, 2019); Art Basel Hong Kong (2017); Sensorium 2018 (2015); the Kochi–Muziris Biennale (2015); the Beirut Art Fair (2014); Art Dubai (2013); the Fondazione Pastificio Cerere & Basu Foundation for the Arts – India, Italy, Myanmar (2014); and the India Art Fair (2020; 2012–18).He received the Young Artist Award from the Kempinski Arts Program in 2013 and he was awarded the Emerging Artist Award by the Foundation of Indian Contemporary Art (FICA) in 2014. He completed the Pro Helvetia artist-in-residence program at Rote Fabrik, Zurich, Switzerland, in 2015; the Kempinski Arts Program in Budapest and Berlin in 2014; and also served as an artist-in-residence at BigCi – Australia in 2015. His practice with paper and pop-up books led him to participate in an international artist’s residency at Khoj on The Idea of the Book in 2009, following which he started working as an independent artist. In 2020, he was a finalist for the Sovereign Asian Art Prize.The artist lives and works in Bangalore.",    
+            profile:  "../images/Sachin-George-Sebastian.jpg",
+            clicks: [
+                "../images/aa31.jpg",
+                "../images/aa32.jpg",
+                "../images/aa33.jpg",
+                "../images/aa34.jpg"
+            ]
+        }
+    };
+    const artist = artistDetails[artistId];
+    if (artist) {
+            document.getElementById("artist-name").textContent = artist.name;
+            document.getElementById("artist-bio-text").textContent = artist.bio;      
+            const profileImage = document.getElementById("artist-image");
+            if (profileImage) {
+                const imgElement = document.createElement("img");
+                imgElement.src = artist.profile;
+                imgElement.alt = artist.name;
+                imgElement.style.maxWidth = "100%"; // Adjust the maximum width as needed
+                imgElement.style.height = "300px";   // Maintain the aspect ratio
+                imgElement.style.width = "300px";
+                imgElement.style.marginRight = "20px";
+                imgElement.style.marginBottom = "20px";
+                imgElement.style.marginTop = "50px";
+                profileImage.appendChild(imgElement);
+            }
+            const photoGallery = document.getElementById("photo-gallery");
+                artist.clicks.forEach(click => {
+                const img = document.createElement("img");
+                img.src = click;
+                img.alt = "Photograph";
+                img.style.maxWidth = "100%"; // Adjust the maximum width as needed
+                img.style.height = "300px";   // Maintain the aspect ratio
+                img.style.width="300px";
+                img.style.marginRight="20px";
+                img.style.marginBottom="20px";
+                photoGallery.appendChild(img);
+        });
+    }
+    </script>
+</body>
+</html>
